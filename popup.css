@@ -1,0 +1,17 @@
+body {
+  width: 300px;
+  height: 200px;
+}
+
+#addTab {
+  border: none;
+}
+
+#tabList {
+  margin-top: 8px;
+}
+
+#tabList > img {
+  width: 16px;
+  height: 16px;
+}
