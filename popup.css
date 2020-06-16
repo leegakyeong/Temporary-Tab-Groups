@@ -7,10 +7,16 @@ button {
   color: mediumslateblue;
   background: none;
   border: 1px solid mediumslateblue;
+  outline: none;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+span {
+  margin-left: 4px;
+  color: mediumslateblue;
 }
 
 #tab-list {
