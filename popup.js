@@ -43,7 +43,7 @@ function addTab(tab) {
   tabContainer.appendChild(tabURL);
   tabContainer.appendChild(deleteTabButton);
 
-  tabFavicon.src = tab.favIconUrl;
+  tabFavicon.src = tab.favIconUrl ? tab.favIconUrl : './images/get_started16.png';
   // tabFavicon.width = 16;
   // tabFavicon.height = 16;
   tabFavicon.alt = `favicon of ${tab.URL}`;
@@ -68,7 +68,6 @@ function addTab(tab) {
 // 이 방법은 팝업을 껐다 켜면 순서가 바뀌어 있을 수도 있어서 조금 그렇지만...
 // 전체를 굳이 다시 렌더하는 것보다는 일단 이렇게 구현해 둠
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-  chrome.extension.getBackgroundPage().console.log(request);
   if (request.shortcut === 'addTab') {
     addTab(request.currentTab);
     sendResponse('Tab added');
