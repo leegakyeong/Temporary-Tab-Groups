@@ -23,7 +23,9 @@ chrome.commands.onCommand.addListener(function(command) {
         } else {
           result.TTG[currentTab.url] = currentTab;
           chrome.storage.sync.set({ TTG: result.TTG }, function() {
-            chrome.runtime.sendMessage({ shortcut: 'addTab', currentTab });
+            chrome.runtime.sendMessage({ shortcut: 'addTab', currentTab }, function(response) {
+              if (!response) alert('saved');
+            });
           });
         }
       });

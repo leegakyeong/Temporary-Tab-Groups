@@ -71,5 +71,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   chrome.extension.getBackgroundPage().console.log(request);
   if (request.shortcut === 'addTab') {
     addTab(request.currentTab);
+    sendResponse('Tab added');
   }
 });
