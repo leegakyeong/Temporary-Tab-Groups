@@ -52,7 +52,7 @@ function addTab(tab) {
   tabURL.target = '_blank';
   tabURL.text = tab.title;
 
-  deleteTabButton.innerText = 'X';
+  deleteTabButton.innerText = 'x';
   deleteTabButton.onclick = function(e) {
     chrome.storage.sync.get('TTG', function(result) {
       delete result.TTG[tab.url];

@@ -3,15 +3,55 @@ body {
   height: 200px;
 }
 
-#add-tab {
-  border: none;
+button {
+  color: mediumslateblue;
+  background: none;
+  border: 1px solid mediumslateblue;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 #tab-list {
-  margin-top: 8px;
+  margin: 8px 0px;
+  margin-bottom: 7px;
+}
+
+.tab-container {
+  height: 24px;
+  margin-top: 4px;
+  border: 1px solid mediumslateblue;
 }
 
 .tab-container > img {
+  display: inline-block;
   width: 16px;
   height: 16px;
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+.tab-container > a {
+  display: inline-block;
+  width: 250px;
+  height: 16px;
+  margin: 0px 4px;
+  overflow: hidden;
+  color: mediumslateblue;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tab-container > a:visited {
+  color: mediumslateblue;
+}
+
+.tab-container > button {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0px;
+  vertical-align: 20%;
 }
