@@ -4,8 +4,8 @@ const tabList = document.getElementById('tab-list');
 chrome.storage.sync.get('TTG', function(result) {
   // chrome.storage에는 객체는 들어가지만 Map은 안 들어간다
   // 객체는 Map과 달리 순서 변경이 안 된다...ㅜㅜ
-  const iterableTTG = Object.entries(result.TTG);
-  if (iterableTTG.length) {
+  if (result.TTG) {
+    const iterableTTG = Object.entries(result.TTG);
     iterableTTG.forEach(function([tabURL, tab]) {
       addTab(tab);
     });
