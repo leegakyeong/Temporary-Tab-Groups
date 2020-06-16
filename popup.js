@@ -1,5 +1,5 @@
-const addTabButton = document.getElementById('addTab');
-const tabList = document.getElementById('tabList');
+const addTabButton = document.getElementById('add-tab');
+const tabList = document.getElementById('tab-list');
 
 chrome.storage.sync.get('TTG', function(result) {
   // chrome.storage에는 객체는 들어가지만 Map은 안 들어간다
@@ -37,13 +37,15 @@ function addTab(tab) {
   const tabURL = document.createElement('a');
   const deleteTabButton = document.createElement('button');
 
+  tabContainer.className = 'tab-container';
+
   tabContainer.appendChild(tabFavicon);
   tabContainer.appendChild(tabURL);
   tabContainer.appendChild(deleteTabButton);
 
   tabFavicon.src = tab.favIconUrl;
-  tabFavicon.width = 32;
-  tabFavicon.height = 32;
+  // tabFavicon.width = 16;
+  // tabFavicon.height = 16;
   tabFavicon.alt = `favicon of ${tab.URL}`;
 
   tabURL.href = tab.url;

@@ -3,15 +3,15 @@ body {
   height: 200px;
 }
 
-#addTab {
+#add-tab {
   border: none;
 }
 
-#tabList {
+#tab-list {
   margin-top: 8px;
 }
 
-#tabList > img {
+.tab-container > img {
   width: 16px;
   height: 16px;
 }
